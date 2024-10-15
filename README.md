@@ -1,0 +1,1 @@
+# This is a solution to setup an HA Elasticsearch Cluster on a Regional GKE Cluster

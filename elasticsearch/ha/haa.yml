@@ -1,0 +1,14 @@
+kind: HighAvailabilityApplication
+apiVersion: ha.gke.io/v1
+metadata:
+  name: elasticsearch-master
+spec:
+  resourceSelection:
+    resourceKind: StatefulSet
+  policy:
+    storageSettings:
+      requireRegionalStorage: false
+    failoverSettings:
+      forceDeleteStrategy: AfterNodeUnreachable
+      afterNodeUnreachable:
+        afterNodeUnreachableSeconds: 20
