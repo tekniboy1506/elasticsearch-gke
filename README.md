@@ -6,7 +6,7 @@
   - Elastic's Elasticsearch Helm chart --> https://github.com/elastic/helm-charts/tree/main/elasticsearch
   - Nginx Ingress on GKE
   - Terraform and Terragrunt to provision GCP resources
-## Brief explainantion on the Project and Teck stack choices:
+## Brief explanation on the Project and Teck stack choices:
 -  I chose Region GKE Cluster along with the Regional PD to give the availability across zones in a GCP region. 
 -  Since the limitation of the Regional PD is that it can only replicate a disk between only 2 regions whereas the GKE Cluster uses 3, I made the choice to use a Native solution from GCP which is the Stateful HA Operator, which can help protect the Elasticsearch cluster in case there's a zone failure.
 -  Last but not least, I chose the Official Elastic's Elasticsearch Helm chart because of its stability and wide range of setups and options.
